@@ -18,7 +18,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Abibat Abdulraheem — Frontend Engineer",
+  title: "Abibat Abdulraheem | Frontend Engineer",
   description:
     "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning ideas into shipped products.",
   metadataBase: new URL("https://abibee.vercel.app"),
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://abibee.vercel.app",
-    title: "Abibat Abdulraheem — Frontend Engineer",
+    title: "Abibat Abdulraheem | Frontend Engineer",
     description:
       "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning ideas into shipped products.",
     siteName: "Abibat Abdulraheem",
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "Abibat Abdulraheem — Frontend Engineer",
+        alt: "Abibat Abdulraheem | Frontend Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abibat Abdulraheem — Frontend Engineer",
+    title: "Abibat Abdulraheem | Frontend Engineer",
     description:
       "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning ideas into shipped products.",
     images: ["/images/logo.png"],
