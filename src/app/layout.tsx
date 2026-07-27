@@ -20,7 +20,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Abibat Abdulraheem — Frontend Engineer",
   description:
-    "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
+    "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning ideas into shipped products.",
   metadataBase: new URL("https://abibee.vercel.app"),
   alternates: {
     canonical: "/",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://abibee.vercel.app",
     title: "Abibat Abdulraheem — Frontend Engineer",
     description:
-      "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
+      "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning ideas into shipped products.",
     siteName: "Abibat Abdulraheem",
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abibat Abdulraheem — Frontend Engineer",
     description:
-      "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
+      "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning ideas into shipped products.",
     images: ["/images/logo.png"],
     creator: "@abibatdev",
   },
