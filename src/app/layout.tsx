@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Abibat Abdulraheem — Frontend Engineer",
   description:
     "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
-  metadataBase: new URL("https://abibat.dev"),
+  metadataBase: new URL("https://abibee.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://abibat.dev",
+    url: "https://abibee.vercel.app",
     title: "Abibat Abdulraheem — Frontend Engineer",
     description:
       "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     "Fintech Frontend",
     "Abibat Abdulraheem",
   ],
-  authors: [{ name: "Abibat Abdulraheem", url: "https://abibat.dev" }],
+  authors: [{ name: "Abibat Abdulraheem", url: "https://abibee.vercel.app" }],
   robots: {
     index: true,
     follow: true,
