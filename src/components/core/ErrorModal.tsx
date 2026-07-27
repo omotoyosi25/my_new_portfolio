@@ -27,7 +27,7 @@ export function ErrorModal({
 }: ErrorModalProps) {
   return (
     <Dialog open={isErrorModalOpen} onOpenChange={setErrorModalState}>
-      <DialogContent className='!z-[9999999999999999999999999999999999999999]'>
+      <DialogContent className='z-[9999999999999999999999999999999999999999]!'>
         <DialogHeader className="bg-red-100">
           <DialogClose className="ml-auto bg-white text-red-900 px-2">
             Close

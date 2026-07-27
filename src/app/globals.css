@@ -1,33 +1,123 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@theme {
+  --color-bgPrimary: #0A0A0C;
+  --color-bgElevated: #15151C;
+  --color-textPrimary: #FFFFFF;
+  --color-textSecondary: #A0A0AA;
+  --color-accentViolet: #B084F5;
+  --color-accentIndigo: #7B5CFA;
+  --color-accentPink: #E060D8;
+  --color-borderSubtle: rgba(255, 255, 255, 0.08);
+
+  --font-sans: var(--font-lora), serif;
+  --font-display: var(--font-poppins), sans-serif;
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-pulse-glow: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-primary: #0A0A0C;
+  --bg-elevated: #15151C;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0AA;
+  --accent-primary: #B084F5;
+  --accent-secondary: #7B5CFA;
+  --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Lenis Smooth Scroll CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Cursor Rules */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Accent Gradient Utilities */
+.text-accent-gradient {
+  background: linear-gradient(135deg, #B084F5 0%, #7B5CFA 50%, #E060D8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bg-accent-gradient {
+  background: linear-gradient(135deg, #B084F5 0%, #7B5CFA 50%, #E060D8 100%);
+}
+
+.border-accent-gradient {
+  border-image: linear-gradient(135deg, #B084F5 0%, #7B5CFA 100%) 1;
+}
+
+/* Underline link animation */
+.hover-underline-link {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #B084F5, #7B5CFA);
+  transform-origin: bottom right;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.hover-underline-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }

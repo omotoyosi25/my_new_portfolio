@@ -35,16 +35,16 @@ const MainHeader = () => {
 
     return (
         <header>
-            <div className='flex justify-between items-center px-4 xl:px-16 py-10'>
-                Abibat
-                <nav className='md:flex gap-5 xl:gap-7 hidden'>
+            <div className='flex justify-between items-center py-10'>
+                <div className="font-bold text-xl tracking-tight">Abibat</div>
+                <nav className='md:flex gap-5 xl:gap-8 hidden items-center'>
                     {
                         headerLink.map((href, index) => (
                             <div key={index}>
                                 <Link
                                     href={href?.link}
-                                    className={cn("hover:text-[#9C9C9C] text-sm",
-                                        pathname == href?.link ? "text-[#32667d] font-semibold" : "text-[#9C9C9C]"
+                                    className={cn("text-sm font-medium transition-colors hover:text-llaventa-600 dark:hover:text-llaventa-400",
+                                        pathname == href?.link ? "text-llaventa-600 dark:text-llaventa-400 font-semibold" : "text-gray-500 dark:text-gray-400"
                                     )}
                                 >{href?.name}
                                 </Link>
@@ -53,12 +53,18 @@ const MainHeader = () => {
                     }
                 </nav>
                 <div className='flex md:hidden'>
-                    <Button>
+                    <Button onClick={() => setMobileMenuModal(true)} className="bg-transparent text-foreground">
                         <Menubar />
                     </Button>
                 </div>
                 <Button
-                    className='hidden md:flex border border-[#32667d] px-4 py-1.5 text-xs xl:text-sm font-medium'
+                    onClick={() => {
+                        const contactSection = document.getElementById("contact");
+                        if (contactSection) {
+                            contactSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}
+                    className='hidden md:flex border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 bg-transparent text-foreground px-5 py-2 text-sm font-medium rounded-lg transition-all'
                     type='button'
                 >
                     Contact Me
