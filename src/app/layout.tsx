@@ -18,9 +18,62 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Abibat Abdulraheem — Frontend Engineer Portfolio",
+  title: "Abibat Abdulraheem — Frontend Engineer",
   description:
-    "Personal portfolio of Abibat Abdulraheem — Frontend Developer turning ideas into real life products with Next.js, React, and Framer Motion.",
+    "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
+  metadataBase: new URL("https://abibat.dev"),
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://abibat.dev",
+    title: "Abibat Abdulraheem — Frontend Engineer",
+    description:
+      "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
+    siteName: "Abibat Abdulraheem",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Abibat Abdulraheem — Frontend Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abibat Abdulraheem — Frontend Engineer",
+    description:
+      "Frontend developer building high-performance web apps for fintech and beyond. Fluent in React, Next.js, Tailwind, and turning 'what if' into shipped products.",
+    images: ["/images/logo.png"],
+    creator: "@abibatdev",
+  },
+  keywords: [
+    "Frontend Developer",
+    "React Developer",
+    "Next.js",
+    "Tailwind CSS",
+    "Framer Motion",
+    "UI Engineer",
+    "Web Developer Nigeria",
+    "Fintech Frontend",
+    "Abibat Abdulraheem",
+  ],
+  authors: [{ name: "Abibat Abdulraheem", url: "https://abibat.dev" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
