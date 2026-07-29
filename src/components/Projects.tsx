@@ -15,7 +15,7 @@ export default function Projects() {
     {
       title: "LendLock (MDM / Smartlock.io)",
       tags: "NEXT.JS • DEVICE SECURITY • EMBEDDED FINANCE",
-      link: "https://liberty-mdm-landing.vercel.app/",
+      link: "https://getsmartlock.io",
       image: "/images/mdm.png",
       description:
         "Device security and management infrastructure built for lenders. Features remote lock, real-time geolocation, and risk analytics—the tooling that lets embedded credit businesses scale with confidence.",

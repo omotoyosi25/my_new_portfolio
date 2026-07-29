@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <>
       {/* Floating Pill Navbar */}
-      <header className="fixed top-6 left-1/2 -translate-x-1/2 z-[1050] w-[90%] sm:w-[75%] md:w-[65%] max-w-225">
+      <header className="fixed top-6 left-1/2 -translate-x-1/2 z-1050 w-[90%] sm:w-[75%] md:w-[65%] max-w-225">
         <div className="flex items-center justify-between px-6 py-3.5 rounded-full bg-bgElevated/90 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
           {/* Logo Mark */}
           <Link href="/" className="flex items-center gap-3 group">
@@ -45,9 +45,15 @@ export default function Navbar() {
               {isMenuOpen ? "CLOSE" : "MENU"}
             </span>
             <div className="relative w-5 h-2.5">
-              <span className={`absolute right-0 h-0.5 bg-white group-hover:bg-accentViolet transition-all duration-300 ease-in-out ${isMenuOpen ? "w-5 rotate-45 top-1" : "w-5 top-0"}`} />
-              <span className={`absolute right-0 h-0.5 bg-white group-hover:bg-accentViolet transition-all duration-300 ease-in-out ${isMenuOpen ? "w-0 opacity-0 top-1" : "w-3.5 top-1/2 -translate-y-1/2"}`} />
-              <span className={`absolute right-0 h-0.5 bg-white group-hover:bg-accentViolet transition-all duration-300 ease-in-out ${isMenuOpen ? "w-5 -rotate-45 top-1" : "w-5 bottom-0"}`} />
+              <span
+                className={`absolute right-0 h-0.5 bg-white group-hover:bg-accentViolet transition-all duration-300 ease-in-out ${isMenuOpen ? "w-5 rotate-45 top-1" : "w-5 top-0"}`}
+              />
+              <span
+                className={`absolute right-0 h-0.5 bg-white group-hover:bg-accentViolet transition-all duration-300 ease-in-out ${isMenuOpen ? "w-0 opacity-0 top-1" : "w-3.5 top-1/2 -translate-y-1/2"}`}
+              />
+              <span
+                className={`absolute right-0 h-0.5 bg-white group-hover:bg-accentViolet transition-all duration-300 ease-in-out ${isMenuOpen ? "w-5 -rotate-45 top-1" : "w-5 bottom-0"}`}
+              />
             </div>
           </button>
         </div>
@@ -63,8 +69,6 @@ export default function Navbar() {
             transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] as const }}
             className="fixed inset-0 z-1000 bg-bgPrimary flex flex-col justify-between p-8 md:p-16"
           >
-
-
             {/* Menu Links */}
             <div className="max-w-6xl mx-auto w-full my-auto py-12">
               <ul className="space-y-4 md:space-y-6">

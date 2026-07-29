@@ -13,7 +13,7 @@ export default function RotatingBadge({
 }: RotatingBadgeProps) {
   return (
     <motion.div
-      className={`relative w-[100px] h-[100px] flex items-center justify-center ${className}`}
+      className={`relative w-25 h-25 flex items-center justify-center ${className}`}
       animate={{ rotate: 360 }}
       transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
     >
@@ -31,7 +31,7 @@ export default function RotatingBadge({
       </svg>
 
       {/* Center dot */}
-      <div className="absolute w-2.5 h-2.5 rounded-full bg-[#B084F5] shadow-[0_0_10px_#B084F5]" />
+      <div className="absolute w-2.5 h-2.5 rounded-full bg-accentViolet shadow-[0_0_10px_#B084F5]" />
     </motion.div>
   );
 }
