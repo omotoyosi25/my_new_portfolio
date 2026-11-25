@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SoundToggle from "./SoundToggle";
+import CvDownload from "./CvDownload";
 
 export default function Hero() {
   const lineVariants = {
@@ -52,7 +53,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Main Headline Block */}
-      <div className="max-w-6xl w-full mx-auto my-auto z-10 font-display">
+      <div className="relative max-w-6xl w-full mx-auto my-auto z-30 font-display">
         <div className="space-y-1 md:space-y-2">
           <motion.h1
             custom={0}
@@ -90,7 +91,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.6 }}
-          className="mt-8 md:mt-12"
+          className="mt-8 md:mt-12 flex flex-wrap items-center gap-6 md:gap-8"
         >
           <a
             href="#projects"
@@ -98,6 +99,7 @@ export default function Hero() {
           >
             VIEW PROJECTS →
           </a>
+          <CvDownload />
         </motion.div>
       </div>
 

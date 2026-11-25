@@ -4,15 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { CV_FILES } from "./CvDownload";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // "/#..." so the links also work from other pages such as /resume.
   const menuItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#hero" },
+    { name: "About", href: "/#about" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Resume", href: "/resume" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -122,6 +125,23 @@ export default function Navbar() {
                   >
                     LinkedIn
                   </a>
+                </div>
+              </div>
+              <div>
+                <p className="uppercase tracking-widest text-white mb-1">
+                  Download CV
+                </p>
+                <div className="flex gap-4">
+                  {CV_FILES.map((f) => (
+                    <a
+                      key={f.href}
+                      href={f.href}
+                      download={f.download}
+                      className="hover:text-accentViolet"
+                    >
+                      {f.href.replace("/", "")}
+                    </a>
+                  ))}
                 </div>
               </div>
               <div>

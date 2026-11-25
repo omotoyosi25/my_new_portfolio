@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cv": "node scripts/build-cv.mjs",
+    "predev": "npm run cv",
+    "prebuild": "npm run cv"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -32,8 +35,10 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "docx": "^9.16.0",
     "eslint": "^10.8.0",
     "eslint-config-next": "^16.2.12",
+    "pdfkit": "^0.21.0",
     "postcss": "^8.5.23",
     "tailwindcss": "^4.3.3",
     "typescript": "^5"
